@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Profile Detection</title>
+    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="script" href="script.js">
+</head>
+<body>
+    <div class="page-container">
+      <header>
+            <div><b>Fake Profile Detection</b></div>
+        </header>
+        <div class="content-wrap">
+         
+            <form action="/predict" method="POST" >
+                <div class="heading"></div>
+                <div class="column">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="statuses_count">Statuses Count</label>
+                        <input type="number" id="statuses_count" name="statuses_count" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="followers_count">Followers Count</label>
+                        <input type="number" id="followers_count" name="followers_count" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="friends_count">Friends Count</label>
+                        <input type="number" id="friends_count" name="friends_count" required>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-group">
+                        <label for="favourites_count">Favorites Count</label>
+                        <input type="number" id="favourites_count" name="favourites_count" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="listed_count">Listed Count</label>
+                        <input type="number" id="listed_count" name="listed_count" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="sex_code">Sex_code</label>
+                        <input type="text" id="sex" name="sex_code" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="langu_code">Language</label>
+                        <input type="text" id="language" name="lang_code">
+                    </div>
+                    
+                </div>
+                <div class="button-container">
+                    <input type="submit" value="Predict">
+                    {% if rand_message %}
+                    <p>Random Forest Prediction: {{ rand_message }}</p>
+                    {% endif %}
+                    {% if svm_message %}
+                    <p>SVM Prediction: {{ svm_message }}</p>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+        <!-- <div class="prediction-results">
+            <div class="result-item">
+                <span class="result-label">Random Forest:</span>
+                <span class="result-message" id="rand-message">{{ rand_message }}</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">SVM:</span>
+                <span class="result-message" id="svm-message">{{ svm_message }}</span>
+            </div>
+
+        </div> -->
+        <footer>
+            <div>© 2024 Fake Profile Detection. All rights reserved.</div>
+        </footer>
+    </div>
+</body>
+</html>

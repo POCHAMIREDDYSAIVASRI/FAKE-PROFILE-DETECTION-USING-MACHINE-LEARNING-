@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('https://images.pexels.com/photos/1672573/pexels-photo-1672573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    
+    background-size: cover;
+    background-repeat:none ;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+header {
+    background-color:rgba(0,0,0,0.1);
+    color:white;
+    padding: 30px 20px; /* Increased padding for header */
+    text-align: center;
+    font-size: xx-large;
+}
+.content-wrap {
+    flex: 1;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-top: 50px; /* Added margin-top for space between header and form */
+}
+h1 {
+    color: #333;
+}
+form {
+    background: rgb(255, 235, 199);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #080808;
+}
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.1);
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 150px;
+}
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+footer {
+    background-color:rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+.prediction-results {
+    margin-top: 2rem;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.result-item {
+    margin-bottom: 1rem;
+}
+
+.result-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+
+.result-message {
+    display: inline-block;
+    margin-left: 1rem;
+}
